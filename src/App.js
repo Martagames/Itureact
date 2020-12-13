@@ -15,7 +15,7 @@ function App()
 {
    const [updatehistory,SetUpdateHistory] = useState(false);
    return(
-  <Auth0Provider domain ={domain} clientId={clientID} redirectUri={window.location.origin }
+  <Auth0Provider domain ={domain} clientId={clientID} redirectUri='https://martagames.github.io/Itureact/'
   scope="read:current_user update:current_user_metadata">
      <div className="App">
   
