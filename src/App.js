@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {Auth0Provider} from '@auth0/auth0-react';
+import Home from "./home";
+import profile from "./profile.js"
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import  Navigate from './Navigate';
+import  Projects from './projects';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+const clientID = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
+
+function App()
+{
+   const [updatehistory,SetUpdateHistory] = useState(false);
+   return(
+  <Auth0Provider domain ={domain} clientId={clientID} redirectUri={window.location.origin }
+  scope="read:current_user update:current_user_metadata">
+     <div className="App">
+  
+  <Router>
+     <Route path="/" render={() => <Navigate this={updatehistory} />} />
+      <Route path="/" exact  render={() => <Home ss={updatehistory} /> }/>
+      <Route path="/projects" exact component={Projects}/>
+      <Route path="/profile" exact component={profile} />
+  </Router>
+  </div>
+  </Auth0Provider>
+)
 }
-
 export default App;

@@ -1,0 +1,137 @@
+.timeTracker
+{
+    display: grid;
+    justify-content: right;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 10px;
+    align-items: center;
+    background-color: grey;
+    height: auto;
+    margin-right: 5px;
+}
+.startTrackerButton
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: skyblue;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+.startTrackerButton:active
+{
+    background-color: rgb(100, 175, 204);
+}
+.startTrackerButton:hover
+{
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+}
+.PlaySymbol
+{
+    position: relative;
+    top: 21%;
+    left: 33%;
+    border-top: 15px solid transparent;
+    border-left: 25px solid white;
+    border-bottom: 15px solid transparent;
+}
+.PauseSymbol
+{
+    position: relative;
+    top:25%;
+    left: 25%;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+}
+.trackerName
+{
+    background-color: rgba(0, 0, 0, 0.19);
+    font-size: 20px;
+    border: none;
+    min-width: 50px;
+    width: auto;
+    height: 30px;
+}
+.timeTracker
+{
+    font-size: 25px;
+}
+.SelectProject
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: skyblue;
+    float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+}
+.tooltiptext
+{
+    padding: 2px;
+    position: absolute;
+    visibility: hidden; 
+    top:50px;
+    right: 76%;
+    height: 30px;
+  width: auto;
+  border-radius: 5px;
+  font-size: 20px;
+    background-color: rgb(85, 85, 85);
+    text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent  ;
+  }
+.SelectProject:hover .tooltiptext
+{
+    opacity: 1;
+    visibility: visible;
+}
+.SelectProjectIcon
+{
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+}
+.SelectProjectPopUp
+{
+    z-index: 100;
+    position: absolute;
+    top: 50px;
+    right: 350px;
+    min-width: 200px;
+    width: auto;
+    height: auto;
+   
+    background-color: darkgray;
+    border-radius: 5px;
+
+}
+.ProjectSelectItem:hover
+{
+    border-radius: 5px;
+    background-color: darkgray;
+    cursor: pointer;
+}
+.ProjectSelectList
+{ 
+   
+    max-height: 400px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(112, 111, 111);
+    padding: 0px;
+    overflow: auto;
+    list-style: none;
+}

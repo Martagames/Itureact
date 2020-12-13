@@ -1,0 +1,143 @@
+.NavBar {
+    
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.LoginButton{
+    position: relative;
+    margin-right: 10px;
+    padding: 2px;
+    border: black solid 2px;
+    border-radius: 4px;
+    width: 80px;
+    float: right;
+    background-color:  rgb(62, 200, 255);
+    font-size: 20px;
+}
+.LoginButton:hover{
+    background-color: rgba(62, 200, 255, 0.61);
+    cursor: pointer;
+}
+.Line{
+    list-style: none;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 2%;
+    align-items: center;
+    margin: 0px;
+    margin-right: 5px;
+}
+.profileImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.Home{position: relative;
+    text-align: left;
+    float: left;
+    font-size: 45px;
+    color: rgb(62, 200, 255);
+    text-decoration: none;
+    margin-top:0px;
+    margin-bottom: 0px;
+    margin-left: 1% ;
+    font-weight: bold;
+    text-shadow:3px 3px rgb(102, 101, 101);
+    
+}
+.Home:hover
+{
+    text-shadow:1px 1px rgb(83, 83, 83);
+}
+.TopBar{
+    width: 100%;
+    z-index: 5;
+    height: 70px;
+    background-color: gray;
+    position: fixed;
+}
+.TopBarWrapper
+{
+    height: 70px;
+    position: relative;
+}
+.href
+{ 
+    position: relative;
+    background-color: darkblue;
+    width:90%;
+    color: white ;
+    height:  auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+.href:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profilePop{
+    position: absolute;
+    background-color: dodgerblue;
+    width: 150px;
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    top: 70px;
+    right: 1%;
+    z-index: 1000;
+    
+}
+.SidePanelButton
+{
+    margin: 10px;
+    vertical-align: middle;
+    align-self: center;
+    float: left;
+}
+.SidePanle
+{
+    position: sticky;
+    float: left;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(102, 101, 101);
+}
+.Selected
+{
+    color: dodgerblue;
+}
+.NotSelected
+{
+    color: black;
+}
+.LogoutButton
+{
+    position: relative;
+    cursor: pointer;
+    background-color: rgb(139, 0, 0);
+    width:90%;
+    color: white ;
+    height:  auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.LogoutButton:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
